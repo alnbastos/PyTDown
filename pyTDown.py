@@ -49,7 +49,7 @@ class Application(tk.Frame):
         # ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=0)
 
     def run_download(self):
-        print(self.url_youtube.get(), self.path_pc.get(), self.itag.get())
+        download_video(self.url_youtube.get(), self.path_pc.get(), self.itag.get())
 
 def search_destination():
     app.path_pc.delete("0", "end")
@@ -68,7 +68,6 @@ def check_itag(url_youtube):
 
     for linha in yt:
         print(linha)
-
 
 root = tk.Tk()
 app = Application(master=root)
